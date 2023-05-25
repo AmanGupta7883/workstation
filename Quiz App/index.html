@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz App: Powered by TW Solution</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="index.js"></script>
+    <style>
+        .btni {
+    background-color: rgb(98, 84, 243);
+    border: none;
+    width: auto;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease 0s;
+  }
+
+  .btni:hover {
+    background-color: rgb(98, 84, 243);
+    color: white;
+    transform: scale(0.95);
+  }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <header class="d-flex align-items-center">
+            <div class="container-fluid d-flex align-items-center justify-content-between">
+                <h3>Quiz</h3>
+                <a href="https://universalworkstation.netlify.app/"><button class="btni">Back To Station</button></a>
+            </div>
+        </header>
+        <div class="grid">
+            <section class="quizArea d-flex flex-column container my-4" id="quizAreas">
+                <img src="sucess.png" id="sc" width="55px"/>
+                <h1 class="title fw-bold">Mock Test</h1>
+                <div id=" question" class="p-3">
+                    <h4>Question <span id="qn">1</span> <span class="text-muted bg-light choice p-1 px-2 rounded">Single
+                            Choice</span></h4>
+                </div>
+                <p class="fw-semibold ps-3" id="ques">What is the full form of HTML?</p>
+
+                <p class="fw-bold text-muted px-3">options</p>
+                <div id="options" class="p-2 d-flex flex-wrap gap-2 align-items-center">
+                    <div class="op d-flex align-items-center justify-content border rounded py-2 px-3" id="op">
+                        <input type="checkbox" name="" class="me-3" id="op1">
+                        <p id="op1">Hyper Transfer Meter Lock</p>
+                    </div>
+                    <div class="op d-flex align-items-center justify-content border rounded py-2 px-3" id="op">
+                        <input type="checkbox" name="" class="me-3" id="op1">
+                        <p id="op2">Hyper Transfer Meter Lock</p>
+                    </div>
+                    <div class="op d-flex align-items-center justify-content border rounded py-2 px-3" id="op">
+                        <input type="checkbox" name="" class="me-3" id="op1">
+                        <p id="op3">Hyper Transfer Meter Lock</p>
+                    </div>
+                    <div class="op d-flex align-items-center justify-content border rounded py-2 px-3" id="op">
+                        <input type="checkbox" name="" class="me-3" id="op1">
+                        <p id="op4">Hyper Transfer Meter Lock</p>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="btn btn-light fw-semibold" onclick="previous()">Previous</button>
+                    <button class="btn btn-light fw-semibold" onclick="nextoption()">Save & Next</button>
+                </div>
+            </section>
+            <section class="dash">
+                <div class="qno w-100 d-flex" id="qnos">
+                    <p class="bg-light rounded-circle fw-bold qbullets text-muted" id="qnos">1</p>
+                    <p class="bg-light rounded-circle fw-bold qbullets text-muted" id="qnos">2</p>
+                    <p class="bg-light rounded-circle fw-bold qbullets text-muted" id="qnos">3</p>
+                    <p class="bg-light rounded-circle fw-bold qbullets text-muted" id="qnos">4</p>
+                    <p class="bg-light rounded-circle fw-bold qbullets text-muted" id="qnos">5</p>
+                    <p class="bg-light rounded-circle fw-bold qbullets text-muted" id="qnos">6</p>
+                    <p class="bg-light rounded-circle fw-bold qbullets text-muted" id="qnos">7</p>
+                    <p class="bg-light rounded-circle fw-bold qbullets text-muted" id="qnos">8</p>
+                    <p class="bg-light rounded-circle fw-bold qbullets text-muted" id="qnos">9</p>
+                    <p class="bg-light rounded-circle fw-bold qbullets text-muted" id="qnos">10</p>
+
+                </div>
+                <button class="btn btn-danger end" onclick="ended()"> End Test</button>
+            </section>
+        </div>
+
+        <div class="popup" id="ynbar">
+            <div id="sTimer" class="setTimer p-2 rounded d-flex justify-content-around flex-column">
+                <label for="timer" class="text-center fw-bold"> Are you sure to end the test?</label>
+                <div class="btns  d-flex justify-content-around">
+                    <button class="btn btn-primary px-3" onclick="yes()">YES</button>
+                    <button class="btn btn-danger px-3" onclick="no()">NO</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
